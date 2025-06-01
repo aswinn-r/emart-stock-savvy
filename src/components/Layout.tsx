@@ -1,8 +1,7 @@
-
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Bell, Settings, Log, Upload, Database, AlertTriangle, LogOut, Menu } from 'lucide-react';
+import { Bell, Settings, Logs, Upload, Database, AlertTriangle, LogOut, Menu } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 interface LayoutProps {
@@ -18,7 +17,7 @@ const Layout: React.FC<LayoutProps> = ({ children, userRole, onLogout }) => {
   const navigationItems = [
     { path: '/', label: 'Dashboard', icon: Database, roles: ['admin', 'maker', 'checker'] },
     { path: '/inventory-entry', label: 'Inventory Entry', icon: Upload, roles: ['admin', 'maker'] },
-    { path: '/inventory-tracking', label: 'Tracking', icon: Log, roles: ['admin', 'maker', 'checker'] },
+    { path: '/inventory-tracking', label: 'Tracking', icon: Logs, roles: ['admin', 'maker', 'checker'] },
     { path: '/alerts', label: 'Alerts', icon: AlertTriangle, roles: ['admin', 'maker', 'checker'] },
   ];
 
